@@ -25,7 +25,7 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo " ============== start building image =================="
-                dir ('testjenkins/docker/toolbox') {
+                dir ('docker/toolbox') {
                 	sh 'docker build -t arikapresyan/toolbox:latest . '
                 }
             }
